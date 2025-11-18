@@ -6,8 +6,13 @@ import { Contato } from "./pages/Contato";
 import { Produto } from "./pages/produto";
 import { NotFound} from "./pages/notFound";
 
+import { Layout } from "./components/layout";
+
 const router = createBrowserRouter([
     {
+        element: <Layout />,
+        children: [
+                {
         path: "/",
         element: <Home />
     },
@@ -26,6 +31,8 @@ const router = createBrowserRouter([
     {
         path: "*",
         element: <NotFound />
+    }
+        ]
     }
 ])
 
